@@ -1,0 +1,39 @@
+$primaryColor: #F05454;
+$secondaryColor: #30475E;
+
+$darkColor: #121212;
+$darkColor-semi: #2A2A2A;
+$lightColor: #F5F5F5;
+
+@import 'animate.css';
+
+@font-face {
+  font-family: 'helvetican';
+  src: url('../assets/fonts/helvetica-neu.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'labelle';
+  src: url('../assets/fonts/LaBelleAurore.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'coolvetica';
+  src: url('../assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+}
+
+
+.flexCentralizer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  li {
+    padding: 0;
+    margin: 0;
+  }
+}
