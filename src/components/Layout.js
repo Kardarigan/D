@@ -6,23 +6,19 @@ const Layout = () => {
     return (
         <div className='App'>
             <Sidebar />
-            <div className='tags'>
+            <span className='tags tags-top'>
+                <span className="tags-top-html">&lt;html&gt;</span>
+                <br />
+                <span className='tags-top-body'>&lt;body&gt;</span>
+            </span>
 
-                <span className='tags-top'>
-                    <span className="tags-top-html">&lt;html&gt;</span>
-                    <br />
-                    <span className='tags-top-body'>&lt;body&gt;</span>
-                </span>
+            <Outlet />
 
-                <Outlet />
-
-                <span className='tags-bottom'>
-                    <span className='tags-bottom-body'>&lt;/body&gt;</span>
-                    <br />
-                    <span className="tags-bottom-html">&lt;/html&gt;</span>
-                </span>
-
-            </div>
+            <span className='tags tags-bottom'>
+                <span className='tags-bottom-body'>&lt;/body&gt;</span>
+                <br />
+                <span className="tags-bottom-html">&lt;/html&gt;</span>
+            </span>
         </div>
     )
 }
