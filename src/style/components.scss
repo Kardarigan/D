@@ -1,3 +1,4 @@
+// ---------------------------[sidebar]
 .navbar {
     width: 60px;
     height: 100%;
@@ -30,15 +31,18 @@
         position: absolute;
         top: 50%;
         margin-top: -90px;
+
         a {
             @extend .flexCentralizer;
             font-size: 22px;
             color: $darkColor-semi;
             position: relative;
             padding: 10px 0;
+
             * {
                 transition: all 0.2s ease-out;
             }
+
             span {
                 width: 100%;
                 font-size: 50%;
@@ -48,6 +52,7 @@
                 opacity: 0;
                 color: $lightColor;
             }
+
             &:hover {
                 svg {
                     opacity: 0;
@@ -58,12 +63,143 @@
                     opacity: 1;
                 }
             }
-            &.active{
+
+            &.active {
                 color: $lightColor
             }
         }
     }
-    ul{
+
+    ul {
         @extend .list-unstyled;
+        position: absolute;
+        width: 100%;
+        display: block;
+        bottom: 20px;
+
+        li {
+            a {
+                display: block;
+                line-height: 20px;
+                text-align: center;
+            }
+
+            &:not(:last-child) {
+                font-size: 120%;
+            }
+        }
     }
 }
+
+// ---------------------------[sidebar]
+// ----------------------[tags in page]
+.tags {
+    font-family: labelle;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-left: 90px;
+
+    * {
+        position: absolute;
+        opacity: 0.5;
+        user-select: none;
+    }
+
+    &-top {
+        top: 35px;
+
+        &-body {
+            margin-left: 10px;
+        }
+    }
+
+    &-bottom {
+        bottom: -600px;
+
+        &-body {
+            margin-left: 10px;
+        }
+    }
+}
+
+// ----------------------[tags in page]
+// ----------------------------[button]
+.button {
+    color: $primaryColor;
+    font-size: 15px;
+    background: transparent;
+    padding: 10px 20px;
+    border: 2px solid $primaryColor;
+    border-radius: 5px;
+    animation: fadeInAnimation 1s 1.5s backwards;
+    white-space: nowrap;
+
+
+    &:hover {
+        background-color: $darkColor-semi;
+    }
+}
+
+// ----------------------------[button]
+// ------------------------------[home]
+.home {
+    .text {
+        &-wrapper {
+            width: 70%;
+            min-width: 90px;
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: 400;
+        }
+    }
+
+    h1 {
+        color: $lightColor;
+        font-size: 53px;
+        font-family: coolvetica;
+        animation: fadeIn 1s 1.5s backwards;
+
+        &::before {
+            content: '<h1>';
+            font-family: labelle;
+            position: absolute;
+            opacity: 0.5;
+            font-size: 18px;
+            margin-top: -40px;
+            left: 15px;
+        }
+
+        &::after {
+            content: '</h1>';
+            font-family: labelle;
+            position: absolute;
+            opacity: 0.5;
+            font-size: 18px;
+            margin-top: 35px;
+            left: 48%;
+        }
+    }
+
+    h2 {
+        cursor: default;
+        color: $grayColor;
+        margin: 20px 0 30px;
+        font-size: 12px;
+        font-family: sans-serif;
+        word-spacing: 5px;
+        letter-spacing: 2px;
+        animation: fadeIn 1s 1.5s backwards;
+        span {
+            transition: 0.3s;
+            &:hover{
+                color: $lightColor;
+                text-shadow: 0px 0px 15px $lightColor;
+            }
+        }
+    }
+}
+
+// ------------------------------[home]

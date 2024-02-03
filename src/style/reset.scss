@@ -5,4 +5,11 @@ textarea {
 a {
   all: unset;
   cursor: pointer;
+  &:hover{
+    color: $lightColor-semi;
+  }
+}
+button{
+  all: unset;
+  cursor: pointer;
 }
