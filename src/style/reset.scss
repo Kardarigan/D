@@ -5,4 +5,7 @@ textarea {
 a {
   all: unset;
   cursor: pointer;
+  &:hover{
+    color: $lightColor-semi;
+  }
 }
