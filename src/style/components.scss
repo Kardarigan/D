@@ -103,8 +103,9 @@
 
     * {
         position: absolute;
-        opacity: 0.5;
+        opacity: 0.3;
         user-select: none;
+        color: $lightColor;
     }
 
     &-top {
@@ -166,7 +167,7 @@
             font-family: labelle;
             font-weight: 100;
             position: absolute;
-            opacity: 0.5;
+            opacity: 0.2;
             font-size: 18px;
             margin-top: -40px;
             left: -15px;
@@ -177,7 +178,7 @@
             font-family: labelle;
             font-weight: 100;
             position: absolute;
-            opacity: 0.5;
+            opacity: 0.2;
             font-size: 18px;
             margin-top: 40px;
             left: 450px;
@@ -259,7 +260,7 @@
                 font-family: labelle;
                 font-weight: 100;
                 position: absolute;
-                opacity: 0.5;
+                opacity: 0.2;
                 font-size: 18px;
                 margin-top: -40px;
                 left: -15px;
@@ -270,14 +271,14 @@
                 font-family: labelle;
                 font-weight: 100;
                 position: absolute;
-                opacity: 0.5;
+                opacity: 0.2;
                 font-size: 18px;
                 margin-top: 70px;
                 left: -15px;
             }
         }
         p {
-            opacity: 0.8;
+            opacity: 0.6;
             font-size: 13px;
         }
     }
