@@ -145,8 +145,6 @@
 // ----------------------------[button]
 // ------------------------------[home]
 .home {
-    padding-left: 150px;
-
     .text {
         width: 70%;
         min-width: 90px;
@@ -237,3 +235,52 @@
 }
 
 // ------------------[letter animation]
+// -----------------------------[about]
+.about {
+    .text {
+        width: 30%;
+        min-width: 90px;
+        max-height: 90%;
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 400;
+
+        h1 {
+            color: $lightColor;
+            font-size: 53px;
+            font-family: coolvetica;
+            animation: fadeIn 1s 1.5s backwards;
+            padding-bottom: 50px;
+    
+            &::before {
+                content: '<h1>';
+                font-family: labelle;
+                font-weight: 100;
+                position: absolute;
+                opacity: 0.5;
+                font-size: 18px;
+                margin-top: -40px;
+                left: -15px;
+            }
+    
+            &::after {
+                content: '</h1>';
+                font-family: labelle;
+                font-weight: 100;
+                position: absolute;
+                opacity: 0.5;
+                font-size: 18px;
+                margin-top: 70px;
+                left: -15px;
+            }
+        }
+        p {
+            opacity: 0.8;
+            font-size: 13px;
+        }
+    }
+}
+
+// -----------------------------[about]
