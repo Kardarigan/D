@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setLetterClass('LetterAnimation-hover');
-    }, 4000);
+    }, 6000);
     return () => {
       clearTimeout(timeoutId);
     };
@@ -21,20 +21,20 @@ const Home = () => {
 
   return (
     <div className="container home">
-      <div className="text-wrapper">
+      <div className="text">
         <h1>
           <LetterAnimation letterClass={letterClass}
             strArray={helloThere}
-            idx={1} />
+            idx={11} />
           <br />
           <LetterAnimation letterClass={letterClass}
             strArray={darigan}
-            idx={13} />
+            idx={23} />
           <br />
           <LetterAnimation
             letterClass={letterClass}
             strArray={whoYou}
-            idx={24}
+            idx={34}
           />
         </h1>
         <h2><span>Web Developer</span> / <span>Software Engineer</span> / <span>CS Student</span></h2>
