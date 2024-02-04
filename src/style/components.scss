@@ -1,6 +1,6 @@
 // ---------------------------[sidebar]
 .navbar {
-    width: 60px;
+    width: 50px;
     height: 100%;
     background-color: $darkColor;
     border-right: 3px solid $lightColor;
@@ -8,7 +8,7 @@
     position: absolute;
     top: 0;
     z-index: 3;
-    min-height: 500px;
+    min-height: 300px;
 
     .logo {
         padding: 0 10px;
@@ -34,7 +34,7 @@
 
         a {
             @extend .flexCentralizer;
-            font-size: 22px;
+            font-size: 20px;
             color: $darkColor-semi;
             position: relative;
             padding: 10px 0;
@@ -103,8 +103,9 @@
 
     * {
         position: absolute;
-        opacity: 0.5;
+        opacity: 0.3;
         user-select: none;
+        color: $lightColor;
     }
 
     &-top {
@@ -127,7 +128,7 @@
 // ----------------------[tags in page]
 // ----------------------------[button]
 .button {
-    color: $primaryColor;
+    color: $primaryColor !important;
     font-size: 15px;
     background: transparent;
     padding: 10px 20px;
@@ -146,15 +147,13 @@
 // ------------------------------[home]
 .home {
     .text {
-        &-wrapper {
-            width: 70%;
-            min-width: 90px;
-            position: absolute;
-            left: 10%;
-            top: 50%;
-            transform: translateY(-50%);
-            font-weight: 400;
-        }
+        width: 70%;
+        min-width: 90px;
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 400;
     }
 
     h1 {
@@ -166,21 +165,23 @@
         &::before {
             content: '<h1>';
             font-family: labelle;
+            font-weight: 100;
             position: absolute;
-            opacity: 0.5;
+            opacity: 0.2;
             font-size: 18px;
             margin-top: -40px;
-            left: 15px;
+            left: -15px;
         }
 
         &::after {
             content: '</h1>';
             font-family: labelle;
+            font-weight: 100;
             position: absolute;
-            opacity: 0.5;
+            opacity: 0.2;
             font-size: 18px;
-            margin-top: 35px;
-            left: 48%;
+            margin-top: 40px;
+            left: 450px;
         }
     }
 
@@ -206,43 +207,81 @@
     }
 }
 
-// ---------------------------[sidebar]
-// ----------------------[tags in page]
-.tags {
-    font-family: labelle;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    padding-left: 90px;
+// ------------------------------[home]
+// ------------------[letter animation]
+.LetterAnimation {
+    display: inline-block;
+    opacity: 0;
+    animation: bounceIn;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    min-width: 10px;
+}
 
-    * {
+.LetterAnimation-hover {
+    min-width: 10px;
+    display: inline-block;
+    animation-fill-mode: both;
+
+    &:hover {
+        animation: rubberBand 1s;
+    }
+}
+
+@for $i from 1 through 53 {
+    .LetterAnimation._#{$i} {
+        animation-delay: #{$i / 10}s;
+    }
+}
+
+// ------------------[letter animation]
+// -----------------------------[about]
+.about {
+    .text {
+        width: 30%;
+        min-width: 90px;
+        max-height: 90%;
         position: absolute;
-        opacity: 0.5;
-        user-select: none;
-    }
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 400;
 
-    &-top {
-        top: 35px;
-
-        &-html {}
-
-        &-body {
-            margin-left: 10px;
+        h1 {
+            color: $lightColor;
+            font-size: 53px;
+            font-family: coolvetica;
+            animation: fadeIn 1s 1.5s backwards;
+            padding-bottom: 50px;
+    
+            &::before {
+                content: '<h1>';
+                font-family: labelle;
+                font-weight: 100;
+                position: absolute;
+                opacity: 0.2;
+                font-size: 18px;
+                margin-top: -40px;
+                left: -15px;
+            }
+    
+            &::after {
+                content: '</h1>';
+                font-family: labelle;
+                font-weight: 100;
+                position: absolute;
+                opacity: 0.2;
+                font-size: 18px;
+                margin-top: 70px;
+                left: -15px;
+            }
         }
-    }
-
-    &-bottom {
-        bottom: 35px;
-
-        &-html {}
-
-        &-body {
-            margin-left: 10px;
-
+        p {
+            opacity: 0.6;
+            font-size: 13px;
         }
     }
 }
 
-// ------------------------------[home]
-
-// ----------------------[tags in page]
+// -----------------------------[about]
