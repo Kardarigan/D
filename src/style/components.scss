@@ -104,7 +104,6 @@
     * {
         position: absolute;
         opacity: 0.3;
-        user-select: none;
         color: $lightColor;
     }
 
@@ -136,7 +135,7 @@
     border-radius: 5px;
     animation: fadeInAnimation 1s 1.5s backwards;
     white-space: nowrap;
-
+    cursor: pointer;
 
     &:hover {
         background-color: $darkColor-semi;
@@ -237,7 +236,9 @@
 
 // ------------------[letter animation]
 // -----------------------------[about]
-.about {
+.about,
+.contact,
+.skills {
     .text {
         width: 30%;
         min-width: 90px;
@@ -262,7 +263,7 @@
                 position: absolute;
                 opacity: 0.2;
                 font-size: 18px;
-                margin-top: -40px;
+                margin-top: -30px;
                 left: -15px;
             }
 
@@ -273,7 +274,7 @@
                 position: absolute;
                 opacity: 0.2;
                 font-size: 18px;
-                margin-top: 70px;
+                margin-top: 60px;
                 left: -15px;
             }
         }
@@ -296,92 +297,166 @@
             }
         }
     }
+}
 
-    .cube {
-        width: 50%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding-top: 18%;
-        overflow: hidden;
+// ------------------------------[cube]
+.cube {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    padding-top: 18%;
+    margin-left: 0;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
 
-        &-spinner {
-            animation-name: spincube;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-            animation-duration: 12s;
-            transform-style: preserve-3d;
-            transform-origin: 100px 100px 0;
-            margin-left: calc(50% - 100px);
+    &-spinner {
+        animation-name: spincube;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: linear;
+        animation-duration: 12s;
+        transform-style: preserve-3d;
+        transform-origin: 100px 100px 0;
+        margin-left: calc(50% - 100px);
 
-            div {
-                position: absolute;
-                width: 200px;
-                height: 200px;
-                border: 1px solid $lightColor;
-                background: $darkColor;
-                font-size: 100px;
-                @extend .flexCentralizer;
-                box-shadow: 0 0 20px 0 $lightColor;
-            }
-
-            .face {
-                &-2 {
-                    transform: rotateY(90deg) translateZ(100px);
-                    color: #f06529;
-                }
-
-                &-3 {
-                    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-                    color: #28a4d9;
-                }
-
-                &-4 {
-                    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-                    color: #5ed4f4;
-                }
-
-                &-5 {
-                    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-                    color: #efd81d;
-                }
-
-                &-6 {
-                    transform: rotateX(-90deg) translateZ(100px);
-                    color: #ec4d28;
-                }
-            }
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 1px solid $lightColor;
+            background: $darkColor;
+            text-align: center;
+            font-size: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px 0 $lightColor;
         }
 
-        @keyframes spincube {
-
-            from,
-            to {
-                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        .face {
+            &-1 {
+                transform: translateZ(100px);
             }
 
-            16% {
-                transform: rotateY(-90deg) rotateZ(90deg);
+            &-2 {
+                transform: rotateY(90deg) translateZ(100px);
             }
 
-            33% {
-                transform: rotateY(-90deg) rotateX(90deg);
+            &-3 {
+                transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
             }
 
-            50% {
-                transform: rotateY(-180deg) rotateZ(90deg);
+            &-4 {
+                transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
             }
 
-            66% {
-                transform: rotateY(-270deg) rotateX(90deg);
+            &-5 {
+                transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
             }
 
-            83% {
-                transform: rotateX(90deg);
+            &-6 {
+                transform: rotateX(-90deg) translateZ(100px);
+            }
+        }
+    }
+
+    @keyframes spincube {
+
+        from,
+        to {
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+
+        16% {
+            transform: rotateY(-90deg) rotateZ(90deg);
+        }
+
+        33% {
+            transform: rotateY(-90deg) rotateX(90deg);
+        }
+
+        50% {
+            transform: rotateY(-180deg) rotateZ(90deg);
+        }
+
+        66% {
+            transform: rotateY(-270deg) rotateX(90deg);
+        }
+
+        83% {
+            transform: rotateX(90deg);
+        }
+    }
+}
+
+// ------------------------------[cube]
+// ----------------------------[loader]
+.loader-active {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    animation: fadeOut 1s 1s;
+    animation-fill-mode: forwards;
+}
+
+// ----------------------------[loader]
+// ------------------------------[form]
+.form {
+    width: 100%;
+    min-width: 300px;
+    margin-top: 20px;
+
+    ul {
+        li {
+            margin-bottom: 10px;
+            display: block;
+            position: relative;
+            opacity: 0;
+            animation: fadeInUp 2s 2s;
+            animation-fill-mode: forwards;
+
+            &.half {
+                width: 40%;
+                display: inline-block;
+
+                &:nth-child(2) {
+                    width: 53%;
+                    margin-left: 7%;
+                    display: inline-block;
+                }
             }
         }
     }
 }
 
-// -----------------------------[about]
+// ------------------------------[form]
+// ----------------------------[skills]
+.skills {
+    &-list {
+        margin-top: 20px;
+
+        li {
+            width: 40%;
+            font-size: 15px;
+            margin-bottom: 10px;
+            display: inline-block;
+            position: relative;
+            opacity: 0;
+            animation: fadeInUp 2s 2s;
+            animation-fill-mode: forwards;
+
+            &::before {
+                content: "# ";
+                color: $primaryColor;
+            }
+        }
+    }
+}
+
+// ----------------------------[skills]
