@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import LetterAnimation from './LetterAnimation';
+import Loader from 'react-loaders';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('LetterAnimation')
   const helloThere = ['H', 'e', 'l', 'l', 'o', ' ', 't', 'h', 'e', 'r', 'e', '!']
-  const darigan = ['I', "'", 'm', ' ', 'D', 'a', 'r', 'i', 'g', 'a', 'n']
+  const myName = ['I', "'", 'm', ' ', 'H', 'o', 's', 's', 'e', 'i', 'n']
   const whoYou = ['w', 'h', 'o', ' ', 'y', 'o', 'u', ' ', 'l', 'o', 'o', 'k', 'i', 'n', 'g', ' ', 'f', 'o', 'r', '.']
 
 
@@ -20,6 +21,7 @@ const Home = () => {
   }, []);
 
   return (
+    <>
     <div className="container home">
       <div className="text">
         <h1>
@@ -28,7 +30,7 @@ const Home = () => {
             idx={11} />
           <br />
           <LetterAnimation letterClass={letterClass}
-            strArray={darigan}
+            strArray={myName}
             idx={23} />
           <br />
           <LetterAnimation
@@ -37,10 +39,12 @@ const Home = () => {
             idx={34}
           />
         </h1>
-        <h2><span>Web Developer</span> / <span>Software Engineer</span> / <span>CS Student</span></h2>
+        <h2><span>Front End Developer</span> / <span>Freelancer</span></h2>
         <Link to="/contactMe" className="button">Say Hello</Link>
       </div>
     </div >
+    <Loader import type="line-spin-fade-loader" />
+    </>
   )
 }
 
