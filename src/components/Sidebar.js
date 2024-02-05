@@ -2,23 +2,27 @@ import { Link, NavLink } from 'react-router-dom'
 import '../style/App.scss';
 import lcLogo from '../assets/images/lightCubeLogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faGithubAlt, faLinkedinIn, faMedium } from '@fortawesome/free-brands-svg-icons';
+import { faCode, faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedinIn, faMedium } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () => {
     return (
         <div className='navbar'>
             <Link className='logo' to='/'>
-                <img src={lcLogo} />
+                <img src={lcLogo} alt='logo' />
             </Link>
             <nav>
                 <NavLink exact activeclassname="active" to="/">
                     <FontAwesomeIcon icon={faHome} />
                     <span>Home</span>
                 </NavLink>
-                <NavLink exact activeclassname="active" id="aboutMe" to="/about">
+                <NavLink exact activeclassname="active" to="/about">
                     <FontAwesomeIcon icon={faUser} />
                     <span>About</span>
+                </NavLink>
+                <NavLink exact activeclassname="active" to="/skills">
+                    <FontAwesomeIcon icon={faCode} />
+                    <span>Skills</span>
                 </NavLink>
                 <NavLink exact activeclassname="active" to="/contact">
                     <FontAwesomeIcon icon={faEnvelope} />

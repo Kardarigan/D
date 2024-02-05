@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import LetterAnimation from './LetterAnimation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCss3, faGit, faHtml5, faJs, faPython, faReact } from '@fortawesome/free-brands-svg-icons';
+import Loader from 'react-loaders';
 
 
 const About = () => {
@@ -18,6 +19,7 @@ const About = () => {
   }, []);
 
   return (
+    <>
     <div className="container about">
       <div className="text">
         <h1>
@@ -25,18 +27,9 @@ const About = () => {
             letterClass={letterClass}
             idx={11} />
         </h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Deleniti ea at voluptatem aspernatur tenetur, fugiat ad rem
-          eius saepe consequuntur ipsa suscipit quis? Debitis, expedita
-          dolor voluptate quas eius ea.</p><br />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Deleniti ea at voluptatem aspernatur tenetur, fugiat ad rem
-          eius saepe consequuntur ipsa suscipit quis? Debitis, expedita
-          dolor voluptate quas eius ea.</p><br />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Deleniti ea at voluptatem aspernatur tenetur, fugiat ad rem
-          eius saepe consequuntur ipsa suscipit quis? Debitis, expedita
-          dolor voluptate quas eius ea.</p>
+        <p>I'm a Web Developer from Iran. I'm interested in building websites from scratch for people around the world.</p><br />
+        <p>In the beginning, I learned coding for building simple websites and terminal apps for automation my life and more for fun.</p><br />
+        <p>After a few years, today I'm ready to build real great websites using popular languages and technologies for all the customers.</p>
       </div>
       <div className="cube">
         <div className="cube-spinner">
@@ -44,10 +37,10 @@ const About = () => {
             <FontAwesomeIcon icon={faPython} />
           </div>
           <div className="face-2">
-            <FontAwesomeIcon icon={faJs} />
+            <FontAwesomeIcon icon={faReact} />
           </div>
           <div className="face-3">
-            <FontAwesomeIcon icon={faReact} />
+            <FontAwesomeIcon icon={faJs} />
           </div>
           <div className="face-4">
             <FontAwesomeIcon icon={faGit} />
@@ -61,6 +54,8 @@ const About = () => {
         </div>
       </div>
     </div>
+    <Loader import type="line-spin-fade-loader" />
+    </>
   )
 }
 

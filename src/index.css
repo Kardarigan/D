@@ -1,9 +1,12 @@
-*{
+* {
   margin: 0;
+  user-select: none;
 }
-  html {
+
+html {
   font-size: 62.5%;
 }
+
 body {
   font: 300 11px 'helvetican', 'sans-serif';
   color: #F5F5F5;
@@ -11,6 +14,7 @@ body {
   overflow: hidden;
   display: block;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -8,6 +8,7 @@ $lightColor: #F5F5F5;
 $lightColor-semi: #c4c4c4;
 
 @import 'animate.css';
+@import '~loaders.css/src/animations/line-spin-fade-loader.scss';
 
 @font-face {
   font-family: 'helvetican';
@@ -50,6 +51,7 @@ $lightColor-semi: #c4c4c4;
 .list-unstyled {
   margin: 0;
   padding: 0;
+  list-style: none;
   li {
     padding: 0;
     margin: 0;
