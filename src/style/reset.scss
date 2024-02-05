@@ -1,7 +1,29 @@
-input,
+input[type=text],
+input[type=email],
 textarea {
+  all: unset;
   font-family: 'helvetican';
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 15px;
+  background-color: $darkColor;
+  border: 1px solid $lightColor;
+  border-radius: 3px;
+  resize: none;
+
+  &::placeholder {
+    color: $lightColor-semi;
+  }
+
+  &:focus {
+    box-shadow: 0 0 10px 0 $lightColor;
+  }
 }
+
+textarea{
+  height: 50px;
+}
+
 a {
   all: unset;
   cursor: pointer;
