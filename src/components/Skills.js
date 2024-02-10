@@ -24,11 +24,13 @@ const Skills = () => {
               letterClass={letterClass}
               idx={11} />
           </h1>
-          <p>As a Front End Developer and a Programmer, usualy im building my Projects using multiple Technologies that lead the website to be a Complete website. </p><br />
+          <p>As a Front End Developer and a Programmer, usualy im building my Projects using multiple Technologies that lead the website to be a Complete website. although i'm not a Web Designer but i know aesthetic and i built everything under principles, exept when i use Black color above the normal.</p><br />
+          <h4>Here are technologies I'm  working with:</h4>
           <ul className='list-unstyled skills-list'>
             <li>HTML5</li>
             <li>CSS3</li>
             <li>JavaScript</li>
+            <li>JQuery</li>
             <li>React.js</li>
             <li>Sass</li>
             <li>Pug</li>

@@ -40,7 +40,7 @@ const Home = () => {
           />
         </h1>
         <h2><span>Front End Developer</span> / <span>Freelancer</span></h2>
-        <Link to="/contactMe" className="button">Say Hello</Link>
+        <Link to="/contactMe" className="button">Say Hello <i className="fa-regular fa-hand-wave"></i></Link>
       </div>
     </div >
     <Loader import type="line-spin-fade-loader" />

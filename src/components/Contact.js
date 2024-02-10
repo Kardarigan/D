@@ -4,7 +4,6 @@ import LetterAnimation from './LetterAnimation'
 import emailjs from '@emailjs/browser';
 
 
-
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('LetterAnimation');
   const title = ['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e'];
@@ -25,18 +24,18 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-  .sendForm('service_auob6ff', 'template_bnlfr5q', form.current, {
-    publicKey: 'jodBKF5Q24e0r_ms3',
-  })
-  .then(
-    () => {
-      alert('The Message sent successfully!');
-    },
-    (error) => {
-      alert('Failed to sending Message'+ error.text);
-      console.log(error);
-    },
-  );
+      .sendForm('service_auob6ff', 'template_bnlfr5q', form.current, {
+        publicKey: 'jodBKF5Q24e0r_ms3',
+      })
+      .then(
+        () => {
+          alert('The Message sent successfully!');
+        },
+        (error) => {
+          alert('Failed to sending Message' + error.text);
+          console.log(error);
+        },
+      );
   };
 
   return (
@@ -51,26 +50,37 @@ const Contact = () => {
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, libero? Similique velit libero quis id suscipit cumque, quisquam necessitatibus, adipisci dicta, optio iusto quia officiis odit architecto dolor itaque aspernatur!</p>
           <div className="form">
             <form ref={form} onSubmit={sendEmail}>
-              <ul className='list-unstyled'>
-                <li className="half">
+              <ul className='list-unstyled row  justify-content-between'>
+                <li className="col-5">
                   <input type="text" name='name' placeholder='Names...' required />
                 </li>
-                <li className="half">
+                <li className="col-6">
                   <input type="email" name='email' placeholder='Email...' required />
                 </li>
-                <li>
+                <li className="col-12">
                   <input type="text" name='subject' placeholder='Subject...' required />
                 </li>
-                <li>
+                <li className="col-12">
                   <textarea name="message" id="message" placeholder='Message Content...'></textarea>
                 </li>
-                <li>
+                <li className="col-12">
                   <input type='submit' className='button' value='Send' />
                 </li>
               </ul>
             </form>
           </div>
         </div>
+
+      </div>
+      <div className="map d-md-block d-none">
+        <div className="map-info">
+          Pasdaran Street<br />
+          Sanandaj 087<br />
+          Kurdistan Province 87<br />
+          Iran<br />
+          <a href="mailto:hosseinirani@outlook.com">hosseinirani@outlook.com</a>
+        </div>
+
       </div>
       <Loader import type="line-spin-fade-loader" />
     </>

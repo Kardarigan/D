@@ -1,48 +1,46 @@
 import { Link, NavLink } from 'react-router-dom'
 import '../style/App.scss';
 import lcLogo from '../assets/images/lightCubeLogo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedinIn, faMedium } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () => {
     return (
-        <div className='navbar'>
+        <div className='dnavbar'>
             <Link className='logo' to='/'>
                 <img src={lcLogo} alt='logo' />
             </Link>
             <nav>
                 <NavLink exact activeclassname="active" to="/">
-                    <FontAwesomeIcon icon={faHome} />
+                    <i className="fa-solid fa-house-blank"></i>
                     <span>Home</span>
                 </NavLink>
                 <NavLink exact activeclassname="active" to="/about">
-                    <FontAwesomeIcon icon={faUser} />
+                    <i className="fa-solid fa-user"></i>
+
                     <span>About</span>
                 </NavLink>
                 <NavLink exact activeclassname="active" to="/skills">
-                    <FontAwesomeIcon icon={faCode} />
+                    <i className="fa-solid fa-code"></i>
                     <span>Skills</span>
                 </NavLink>
                 <NavLink exact activeclassname="active" to="/contact">
-                    <FontAwesomeIcon icon={faEnvelope} />
+                    <i className="fa-solid fa-envelope"></i>
                     <span>Contact</span>
                 </NavLink>
             </nav>
             <ul>
                 <li>
                     <a target='_blank' rel='noreferrer' href='https://github.com/Kardarigan'>
-                        <FontAwesomeIcon icon={faGithub} />
+                        <i className="fab fa-github"></i>
                     </a>
                 </li>
                 <li>
                     <a target='_blank' rel='noreferrer' href='https://github.com/Kardarigan'>
-                        <FontAwesomeIcon icon={faLinkedinIn} />
+                        <i className="fab fa-linkedin-in"></i>
                     </a>
                 </li>
                 <li>
                     <a target='_blank' rel='noreferrer' href='https://medium.com/@darigan'>
-                        <FontAwesomeIcon icon={faMedium} />
+                        <i className="fab fa-medium"></i>
                     </a>
                 </li>
             </ul>
