@@ -76,8 +76,8 @@ const Contact = () => {
         <div className="map-info">
           342 Spinnaker Lane<br />
           Chicago<br />
-          Kurdistan Province 87<br />
-          Iran<br />
+          Illinois<br />
+          U.S<br />
           <a href="mailto:duckduckstay@outlook.com">duckduckstay@outlook.com</a>
         </div>
 
