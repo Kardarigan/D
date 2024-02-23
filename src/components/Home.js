@@ -6,7 +6,7 @@ import Loader from 'react-loaders';
 const Home = () => {
   const [letterClass, setLetterClass] = useState('LetterAnimation')
   const helloThere = ['H', 'e', 'l', 'l', 'o', ' ', 't', 'h', 'e', 'r', 'e', '!']
-  const myName = ['I', "'", 'm', ' ', 'H', 'o', 's', 's', 'e', 'i', 'n']
+  const myName = ['I', "'", 'm', ' ', 'D','a','r','i',,'g','a','n']
   const whoYou = ['w', 'h', 'o', ' ', 'y', 'o', 'u', ' ', 'l', 'o', 'o', 'k', 'i', 'n', 'g', ' ', 'f', 'o', 'r', '.']
 
 
