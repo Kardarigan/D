@@ -74,11 +74,11 @@ const Contact = () => {
       </div>
       <div className="map d-md-block d-none">
         <div className="map-info">
-          Pasdaran Street<br />
-          Sanandaj 087<br />
+          342 Spinnaker Lane<br />
+          Chicago<br />
           Kurdistan Province 87<br />
           Iran<br />
-          <a href="mailto:hosseinirani@outlook.com">hosseinirani@outlook.com</a>
+          <a href="mailto:duckduckstay@outlook.com">duckduckstay@outlook.com</a>
         </div>
 
       </div>
