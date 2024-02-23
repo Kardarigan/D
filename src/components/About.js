@@ -26,7 +26,7 @@ const About = () => {
               idx={11} />
           </h1>
           <p></p><br />
-          <p>I'm a Web Developer from Iran. I'm interested in building websites from scratch for people around the world.</p><br />
+          <p>I'm a Web Developer from Chicago. I'm interested in building websites from scratch for people around the world.</p><br />
           <p>In the beginning, I learned coding for building simple websites and terminal apps for automation my life and more for fun.</p><br />
           <p>After a few years, today I'm ready to build real great websites using popular languages and technologies for all the customers.</p>
         </div>
