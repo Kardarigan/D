@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import LetterAnimation from "./LetterAnimation"
 import Loader from "react-loaders"
+import { cubeFaces } from "./Constans"
 
 const About = () => {
   const [letterClass, setLetterClass] = useState("LetterAnimation")
@@ -43,24 +44,11 @@ const About = () => {
 
         <div className="cube d-md-flex align-items-center d-none">
           <div className="cube-spinner">
-            <div className="face-1">
-              <i className="fa-brands fa-python"></i>
-            </div>
-            <div className="face-2">
-              <i className="fa-brands fa-react"></i>
-            </div>
-            <div className="face-3">
-              <i className="fa-brands fa-js"></i>
-            </div>
-            <div className="face-4">
-              <i className="fa-brands fa-git"></i>
-            </div>
-            <div className="face-5">
-              <i className="fa-brands fa-html5"></i>
-            </div>
-            <div className="face-6">
-              <i className="fa-brands fa-css3"></i>
-            </div>
+            {cubeFaces.map((className, index) => (
+              <div className={`face-${index + 1}`} key={index}>
+                <i className={`fab ${className}`} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
