@@ -29,3 +29,28 @@ export const sideIcons = [
     path: "/contact",
   },
 ]
+
+export const sideLinks = [
+  {
+    icon: "fa-github",
+    link: "https://github.com/Kardarigan",
+  },
+  {
+    icon: "fa-medium",
+    link: "https://medium.com/@darigan",
+  },
+]
+
+export const skills = [
+  "HTML5",
+  "CSS3",
+  "Javascript ES6+",
+  "JQuery",
+  "React.js",
+  "Pug",
+  "Sass",
+  "Bootstrap",
+  "Tailwind",
+  "Python",
+  "Django",
+]

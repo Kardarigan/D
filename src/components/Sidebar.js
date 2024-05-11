@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom"
 import "../style/App.scss"
 import lcLogo from "../assets/images/lightCubeLogo.png"
-import { sideIcons } from "./Constans"
+import { sideIcons, sideLinks } from "./Constans"
 
 const Sidebar = () => {
   return (
@@ -18,33 +18,13 @@ const Sidebar = () => {
         ))}
       </nav>
       <ul>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/Kardarigan"
-          >
-            <i className="fab fa-github"></i>
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/Kardarigan"
-          >
-            <i className="fab fa-linkedin-in"></i>
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://medium.com/@darigan"
-          >
-            <i className="fab fa-medium"></i>
-          </a>
-        </li>
+        {sideLinks.map((item, index) => (
+          <li key={index}>
+            <a target="_blank" rel="noreferrer" href={item.link}>
+              <i className={`fab ${item.icon}`}></i>
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   )
