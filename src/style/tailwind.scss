@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .flex {
+    &-fullcenter {
+      @apply flex justify-center items-center;
+    }
+
+    &-seperate {
+      @apply flex justify-between items-center;
+    }
+  }
+  .button {
+    @apply transition duration-200 lg:text-sm text-center font-semibold backdrop-blur-sm text-[12px] rounded md:w-auto inline-block w-full px-10 py-2;
+    &-outline {
+      * {
+        @apply bg-transparent;
+      }
+      &-light {
+        @apply text-slate-100  fakeBorderLight hover:bg-slate-50 hover:text-slate-800;
+      }
+      &-dark {
+        @apply text-slate-900 bg-transparent fakeBorderDark hover:bg-slate-900 hover:text-slate-200;
+      }
+    }
+    &-light {
+      @apply text-slate-800 bg-slate-200 bg-opacity-70 hover:bg-opacity-80;
+    }
+    &-dark {
+      @apply text-slate-200 bg-slate-700 bg-opacity-70 hover:bg-opacity-80;
+    }
+    &-sky {
+      @apply text-slate-200 bg-blue-600 hover:bg-opacity-80;
+    }
+  }
+  .bg {
+    &-fullcenter {
+      @apply bg-center bg-cover bg-no-repeat;
+    }
+    &-fullobject {
+      @apply object-center object-cover;
+    }
+  }
+  .navitem {
+    @apply transition text-sm font-semibold rounded px-3 py-2  bg-opacity-0 hover:bg-opacity-10 hover:bg-slate-500 hover:backdrop-blur-sm;
+  }
+  .link {
+    @apply underline hover:decoration-2;
+  }
+  .halfhalf {
+    @apply flex md:flex-row flex-col-reverse justify-center sm:gap-12 max-container;
+  }
+  .title {
+    @apply md:text-3xl text-xl font-bold;
+    &-lg {
+      @apply md:text-5xl text-2xl font-bold;
+    }
+  }
+  .field {
+    @apply bg-slate-700 text-slate-200 border-0 text-sm rounded transition-all duration-100 focus-within:ring-1 focus-within:ring-blue-600 block w-full px-3;
+  }
+  .fullSection {
+    @apply h-screen w-full relative flex-fullcenter bg-fullcenter;
+
+    h2,
+    h1 {
+      @apply md:text-6xl text-4xl;
+    }
+    p {
+      @apply my-2 text-xs;
+    }
+    .linkBox {
+      @apply md:flex gap-5 md:mx-auto padding;
+    }
+  }
+  .label {
+    @apply text-slate-200 md:text-sm text-xs font-bold;
+  }
+}
+@layer utilities {
+  .padding {
+    @apply md:px-16 px-8 md:py-24 py-12;
+  }
+
+  .padding-x {
+    @apply sm:px-16 px-8;
+  }
+
+  .padding-y {
+    @apply sm:py-24 py-12;
+  }
+
+  .padding-l {
+    @apply sm:pl-16 pl-8;
+  }
+
+  .padding-r {
+    @apply sm:pr-16 pr-8;
+  }
+
+  .padding-t {
+    @apply sm:pt-24 pt-12;
+  }
+
+  .padding-b {
+    @apply sm:pb-24 pb-12;
+  }
+
+  .info-text {
+    @apply font-montserrat text-slate-gray text-lg leading-7;
+  }
+  .pagecenter {
+    @apply max-w-[800px] mx-auto pt-32 padding-x;
+  }
+  .size-screen {
+    @apply w-screen h-screen;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold;
+}
+select {
+  &.field {
+    @apply py-2;
+  }
+}
+textarea {
+  &.field {
+    @apply py-2;
+  }
+}

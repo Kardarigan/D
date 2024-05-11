@@ -6,7 +6,7 @@ import Loader from 'react-loaders';
 const Home = () => {
   const [letterClass, setLetterClass] = useState('LetterAnimation')
   const helloThere = ['H', 'e', 'l', 'l', 'o', ' ', 't', 'h', 'e', 'r', 'e', '!']
-  const myName = ['I', "'", 'm', ' ', 'D','a','r','i',,'g','a','n']
+  const myName = ['I', "'", 'm', ' ', 'D']
   const whoYou = ['w', 'h', 'o', ' ', 'y', 'o', 'u', ' ', 'l', 'o', 'o', 'k', 'i', 'n', 'g', ' ', 'f', 'o', 'r', '.']
 
 
@@ -31,7 +31,7 @@ const Home = () => {
           <br />
           <LetterAnimation letterClass={letterClass}
             strArray={myName}
-            idx={23} />
+            idx={25} />
           <br />
           <LetterAnimation
             letterClass={letterClass}
@@ -40,7 +40,7 @@ const Home = () => {
           />
         </h1>
         <h2><span>Front End Developer</span> / <span>Freelancer</span></h2>
-        <Link to="/contactMe" className="button">Say Hello <i className="fa-regular fa-hand-wave"></i></Link>
+        <Link to="/contact" className="button">Say Hello <i className="fa-regular fa-hand-wave"></i></Link>
       </div>
     </div >
     <Loader import type="line-spin-fade-loader" />

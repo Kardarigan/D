@@ -1,32 +1,53 @@
-$primaryColor: #F05454;
-$secondaryColor: #30475E;
+$primaryColor: #f05454;
+$secondaryColor: #30475e;
 
 $darkColor: #121212;
-$darkColor-semi: #2A2A2A;
+$darkColor-semi: #2a2a2a;
 $grayColor: #626262;
-$lightColor: #F5F5F5;
+$lightColor: #f5f5f5;
 $lightColor-semi: #c4c4c4;
 
-@import 'animate.css';
-@import '~loaders.css/src/animations/line-spin-fade-loader.scss';
+@import "animate.css";
+@import "~loaders.css/src/animations/line-spin-fade-loader.scss";
 
 @font-face {
-  font-family: 'helvetican';
-  src: url('../assets/fonts/helvetica-neu.ttf') format('ttf');
+  font-family: "helvetican";
+  src: url("../assets/fonts/helvetica-neu.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: 'labelle';
-  src: url('../assets/fonts/LaBelleAurore.woff2') format('woff2');
+  font-family: "labelle";
+  src: url("../assets/fonts/LaBelleAurore.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'coolvetica';
-  src: url('../assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+  font-family: "coolvetica";
+  src: url("../assets/fonts/CoolveticaRg-Regular.woff2") format("woff2");
 }
 
+* {
+  margin: 0;
+  user-select: none;
+}
 
-.container{
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 300 11px "helvetican", "sans-serif";
+  color: #f5f5f5;
+  background-color: #121212;
+  overflow: hidden;
+  display: block;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container {
   opacity: 0;
   margin: 0 auto;
   z-index: 1;
